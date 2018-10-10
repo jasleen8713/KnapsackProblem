@@ -1,0 +1,13 @@
+Package: KnapsackProblem
+Type: Package
+Title: Different implementations of knapsack problem
+Version: 0.1.0
+Author: Aashana(aasni448), Jasleen(jasma846)
+Maintainer: The package maintainer <jasleen8713@gmail.com>
+Description: This package implements knapsack 0-1 problem using brute-force approach, dynamic programming and greedy heuristic and compares the complexity.
+License: Apache License
+Encoding: UTF-8
+LazyData: true
+Suggests: knitr, rmarkdown, testthat
+VignetteBuilder: knitr
+RoxygenNote: 6.1.0
