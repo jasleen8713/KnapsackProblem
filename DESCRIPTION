@@ -8,6 +8,6 @@ Description: This package implements knapsack 0-1 problem using brute-force appr
 License: Apache License
 Encoding: UTF-8
 LazyData: true
-Suggests: knitr, rmarkdown, testthat, foreach, doParallel
+Suggests: knitr, rmarkdown, testthat, foreach
 VignetteBuilder: knitr
 RoxygenNote: 6.1.0
