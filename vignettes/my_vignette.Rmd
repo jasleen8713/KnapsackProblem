@@ -1,0 +1,51 @@
+---
+title: "Knapsack Problem"
+author: "Aashana, Jasleen"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Knapsack Problem 
+
+
+## Overview
+
+This package has 3 different functions to solve Knapsack problem. We have implemented Brute force Algortithm, Dynamic programming and Greedy Heuristic to solve the knapsack problem. We have also tried parallelizing Brute force implementation. We try to understand the complexity of these implementations.
+
+Dataset being used is:
+```{r}
+set.seed(42)
+n <- 2000
+knapsack_objects <-
+data.frame(
+w=sample(1:4000, size = n, replace = TRUE), v=runif(n = n, 0, 10000)
+)
+```
+
+* brute_force_knapsack
+
+Example:
+```{r}
+KnapsackProblem::brute_force_knapsack(x = knapsack_objects[1:8,], W = 3500)
+```
+
+How much time does it takes to run the algorithm for n = 16 objects?
+```{r}
+system.time(KnapsackProblem::brute_force_knapsack(x = knapsack_objects[1:8,], W = 3500))
+```
+
+
+
+
+
