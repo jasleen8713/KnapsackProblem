@@ -1,5 +1,5 @@
-#' Function to solve knapsack problem using brute force search
-#' @param x as data.frame of weights and profits with
+#' Function to solve knapsack problem using greedy algorithm
+#' @param x as data.frame of weights and profits
 #' @param W as maximum kapsack weight
 #' @return a list
 #' @export
