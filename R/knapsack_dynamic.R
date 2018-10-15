@@ -2,14 +2,6 @@
 #' @param x as data.frame of weights and profits
 #' @param W as maximum kapsack weight
 #' @return a list
-#' @examples
-#' knapsack_dynamic(x = knapsack_objects[1:8,], W = 3500)
-#` set.seed(42)
-#`n <- 2000
-#`knapsack_objects <-
-#`  data.frame(
-#`    w=sample(1:4000, size = n, replace = TRUE), v=runif(n = n, 0, 10000)
-#`  )
 #' @export
 knapsack_dynamic <- function(x,W){
 

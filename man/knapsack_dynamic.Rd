@@ -2,12 +2,12 @@
 % Please edit documentation in R/knapsack_dynamic.R
 \name{knapsack_dynamic}
 \alias{knapsack_dynamic}
-\title{Function to solve knapsack problem using brute force search}
+\title{Function to solve knapsack problem using dynammic programming}
 \usage{
 knapsack_dynamic(x, W)
 }
 \arguments{
-\item{x}{as data.frame of weights and profits with}
+\item{x}{as data.frame of weights and profits}
 
 \item{W}{as maximum kapsack weight}
 }
@@ -15,7 +15,7 @@ knapsack_dynamic(x, W)
 a list
 }
 \description{
-Function to solve knapsack problem using brute force search
+Function to solve knapsack problem using dynammic programming
 }
 \examples{
 knapsack_dynamic(x = knapsack_objects[1:8,], W = 3500)
