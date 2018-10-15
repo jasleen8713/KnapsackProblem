@@ -3,5 +3,6 @@
 export(brute_force_knapsack)
 export(greedy_knapsack)
 export(knapsack_dynamic)
-importFrom(doParallel,registerDoParallel)
+importFrom(foreach,"%do%")
+importFrom(foreach,"%dopar%")
 importFrom(utils,combn)

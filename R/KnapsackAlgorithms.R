@@ -4,7 +4,7 @@
 #' @param parallel as boolean value
 #' @return a list
 #' @importFrom utils combn
-#' @importFrom doParallel registerDoParallel
+#' @importFrom foreach "%dopar%" "%do%"
 #' @export
 brute_force_knapsack <- function(x,W,parallel=FALSE){
 
@@ -61,20 +61,20 @@ brute_force_knapsack <- function(x,W,parallel=FALSE){
     {
 
       #detecting and using cores accordingly
-      cores=detectCores()
-      cl <- makeCluster(cores[1]-1) #avoid overloading
+      cores= parallel::detectCores()
+      cl <- parallel::makeCluster(cores[1]-1) #avoid overloading
       doParallel::registerDoParallel(cl)
 
-      sets <- foreach(i=1:totalitems) %dopar% {
+      sets <- foreach::foreach(i=1:totalitems) %dopar% {
         combn(totalitems, i, simplify = F)
       }
       finalsets <- unlist(sets, recursive = F)
 
-      output <- foreach(k=1:length(finalsets)) %do% {
+      output <- foreach::foreach(k=1:length(finalsets)) %do% {
         tempWeight <- 0
         tempValue <- 0
         index <- c()
-        foreach(j=1:length(finalsets[[k]])) %do% {
+        foreach::foreach(j=1:length(finalsets[[k]])) %do% {
           item<-finalsets[[k]][[j]]
           tempWeight <- tempWeight + x[item,]$w
           tempValue <- tempValue + x[item,]$v
@@ -87,7 +87,7 @@ brute_force_knapsack <- function(x,W,parallel=FALSE){
       }
 
       #stop cluster
-      stopCluster(cl)
+      parallel::stopCluster(cl)
       return(list(value=value,elements=elements))
     }
   }

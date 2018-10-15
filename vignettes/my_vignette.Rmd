@@ -45,7 +45,15 @@ How much time does it takes to run the algorithm for n = 16 objects?
 system.time(KnapsackProblem::brute_force_knapsack(x = knapsack_objects[1:8,], W = 3500))
 ```
 
+* brute_force_knapsack (Parallel)
 
+Example:
+
+KnapsackProblem::brute_force_knapsack(x = knapsack_objects[1:8,], W = 3500, TRUE)
+
+What performance gain could you get by parallelizing brute force search?
+
+parallelizing is taking comparitively less time for large dataset but for small dataset the gain is not significant.
 
 
 
