@@ -17,6 +17,3 @@ a list
 \description{
 Function to solve knapsack problem using dynammic programming
 }
-\examples{
-knapsack_dynamic(x = knapsack_objects[1:8,], W = 3500)
-}
