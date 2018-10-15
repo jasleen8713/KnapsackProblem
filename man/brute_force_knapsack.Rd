@@ -4,12 +4,14 @@
 \alias{brute_force_knapsack}
 \title{Function to solve knapsack problem using brute force search}
 \usage{
-brute_force_knapsack(x, W)
+brute_force_knapsack(x, W, parallel = FALSE)
 }
 \arguments{
 \item{x}{as data.frame of weights and profits with}
 
 \item{W}{as maximum kapsack weight}
+
+\item{parallel}{as boolean value}
 }
 \value{
 a list
