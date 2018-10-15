@@ -7,7 +7,7 @@
 greedy_knapsack(x, W)
 }
 \arguments{
-\item{x}{as data.frame of weights and profits}
+\item{x}{as data.frame of weights and value}
 
 \item{W}{as maximum kapsack weight}
 }

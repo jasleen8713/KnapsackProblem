@@ -1,5 +1,5 @@
 #' Function to solve knapsack problem using dynamic programming
-#' @param x as data.frame of weights and profits
+#' @param x as data.frame of weights and value
 #' @param W as maximum kapsack weight
 #' @return a list
 #' @export

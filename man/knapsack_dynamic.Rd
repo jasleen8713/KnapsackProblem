@@ -7,7 +7,7 @@
 knapsack_dynamic(x, W)
 }
 \arguments{
-\item{x}{as data.frame of weights and profits}
+\item{x}{as data.frame of weights and value}
 
 \item{W}{as maximum kapsack weight}
 }
