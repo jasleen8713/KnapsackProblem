@@ -1,4 +1,4 @@
-#' Function to solve knapsack problem using dynammic programming
+#' Function to solve knapsack problem using dynamic programming
 #' @param x as data.frame of weights and profits
 #' @param W as maximum kapsack weight
 #' @return a list
