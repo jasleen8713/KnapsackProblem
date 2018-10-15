@@ -4,7 +4,6 @@
 #' @param parallel as boolean value
 #' @return a list
 #' @importFrom utils combn
-#' @importFrom doParallel registerDoParallel
 #' @export
 brute_force_knapsack <- function(x,W,parallel=FALSE){
 
